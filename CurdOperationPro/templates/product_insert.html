@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>Product Insert Form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    label{
+        color: red;
+        margin-top: 20px;
+    }
+    #pid{
+        margin-top: 10px;
+    }
+    body{
+        background-color: cyan;
+    }
+    h3{
+        text-align: center;
+        font-size: 45px;
+    }
+    form{
+        margin-top: 20px;
+        border: 20px solid black;
+        border-radius: 20px;
+        box-shadow: 10px 10px 5px red,-10px -10px 5px red;
+
+    }
+    #home-id{
+        margin-top: 200px;
+        font-size: 20px;
+    }
+    a{
+        margin-left: 100px;
+        color: black;
+    }
+    h5{
+        margin-top: 200px;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <center>
+            <h5>Welcome To Insert Page</h5>
+            </center>
+        </div>
+        <div class="col-md-6">
+            <form method="post">
+                <h3>Enter Product Details</h3>
+                {% csrf_token %}
+                <label id="pid">Enter Product ID:</label>
+                {{ iform.product_id }}
+                <label>Enter Product Name:</label>
+                {{ iform.product_name }}
+                <label>Enter Product Cost:</label>
+                {{ iform.product_cost }}
+                <label>Enter Product Color:</label>
+                {{ iform.product_color }}
+                <label>Enter Product Class:</label>
+                {{ iform.product_class }}
+                <label>Enter Customer Name:</label>
+                {{ iform.customer_name }}
+                <label>Enter Customer Email ID:</label>
+                {{ iform.customer_email }}
+                <label>Enter Customer Mobile No.:</label>
+                {{ iform.customer_mobile }}<br>
+                <center>
+                    <input type="submit" value="INSERT" class="btn btn-success">
+                    <input type="reset" value="CLEAR" class="btn btn-danger">
+                </center>
+            </form>
+        </div>
+        <div class="col-md-3" id="home-id">
+            <center>
+            <a href="/#/">Go to Home</a>
+            </center>
+        </div>
+    </div>
+</div>
+</body>
+</html>

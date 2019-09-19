@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Product Update Form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h4{
+        text-shadow: 2px 2px 2px red,3px 3px 3px green;
+        font-size: 60px;
+    }
+    body{
+        background-color: cyan;
+    }
+    label{
+        margin-top: -5px;
+        font-size: 25px;
+        color: red;
+        font-family: cursive;
+    }
+    form{
+        margin-top: 30px;
+    }
+    #divid{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    a{
+        color: red;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="post">
+                <h4>Update Product</h4>
+                {% csrf_token %}
+                <label>Enter Product ID</label>
+                {{ uform.product_id }}<br>
+                <label>Enter Product Cost</label>
+                {{ uform.product_cost }}<br>
+                <center>
+                <input type="submit" value="UPDATE" class="btn btn-success">
+                <input type="reset" value="CLEAR" class="btn btn-danger">
+                </center>
+                <center>
+                    <div id="divid">
+                        <a id="aid" href="/#/">Goto Home</a>
+                    </div>
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

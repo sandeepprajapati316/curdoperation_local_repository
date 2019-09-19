@@ -1,0 +1,8 @@
+.jumbotron{
+    margin: 20px 100px 0px 100px;
+}
+a{
+    margin-inside: 120px;
+    font-size: 30px;
+    border: 20px red solid;
+}

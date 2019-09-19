@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Product Delete Form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h2{
+        font-size: 50px;
+        text-shadow: 2px 2px red;
+    }
+    body{
+        background-color: cyan;
+    }
+    label{
+        font-size: 25px;
+        font-family: cursive;
+        color: red;
+    }
+    #divid{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    a{
+        color: red;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="post">
+                <h2>Delete Product</h2>
+                {% csrf_token %}
+                <label>Enter Product ID:</label>
+                {{ dform.product_id }}<br>
+                <center>
+                    <input type="submit" value="DELETE" class="btn btn-success">
+                    <input type="reset" value="CLEAR" class="btn btn-danger">
+                </center>
+            </form>
+            <center>
+                <div id="divid">
+                    <a id="aid" href="/#/">Goto Home</a>
+                </div>
+            </center>
+        </div>
+    </div>
+</div>
+</body>
+</html>
